@@ -1,4 +1,4 @@
-package exercices;
+package exercises;
 
 import exercicio_entities.Department;
 import exercicio_entities.HourContract;
@@ -30,13 +30,13 @@ public class Composition1 {
         System.out.print("How many contracts to this worker ?");
         int n = sc.nextInt();
         for (int i = 1; i <= n; i++) {
-        System.out.println("Enter contract " + "#" + i + " data: ");
-        System.out.print("Date (DD/MM/YYYY): ");
-        LocalDate contractDate = LocalDate.parse(sc.next(), fmt); //.parse é para converter, ele pega oq foi escrito e converte para o molde fmt igual informado
-        System.out.print("Value per hour: ");
-        double valuePerHour = sc.nextDouble();
-        System.out.print("Duration (hours): ");
-        int hours = sc.nextInt();
+            System.out.println("Enter contract " + "#" + i + " data: ");
+            System.out.print("Date (DD/MM/YYYY): ");
+            LocalDate contractDate = LocalDate.parse(sc.next(), fmt); //.parse é para converter, ele pega oq foi escrito e converte para o molde fmt igual informado
+            System.out.print("Value per hour: ");
+            double valuePerHour = sc.nextDouble();
+            System.out.print("Duration (hours): ");
+            int hours = sc.nextInt();
             HourContract contract = new HourContract(contractDate, valuePerHour, hours);
             worker.addContract(contract);
         }
